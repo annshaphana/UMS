@@ -17,7 +17,7 @@ namespace WindowsFormsApp1.Controllers
     {
         private static string connectionString = "Data Source=users.db;Version=3;";
         private const string AdminUsername = "admin";
-        private const string AdminPassword = "1234";
+        private const string AdminPassword = "*";
         public bool Login(string username, string password) 
         {
             return username == AdminUsername && password == AdminPassword;

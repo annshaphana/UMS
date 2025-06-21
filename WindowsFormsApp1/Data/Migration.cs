@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
+using WindowsFormsApp1.Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace WindowsFormsApp1.Data
@@ -37,17 +39,19 @@ namespace WindowsFormsApp1.Data
                         Phone TEXT NOT NULL
                     );",
 
+                    
                     @"
                     CREATE TABLE IF NOT EXISTS Users(
                         UserID INTEGER PRIMARY KEY AUTOINCREMENT,
-                        Username TEXT NOT NULL UNIQUE,
+                        Username TEXT NOT NULL,
                         Password TEXT NOT NULL,
                         Role TEXT NOT NULL CHECK(Role IN ('Admin', 'Student', 'Teacher')),
                         IsActive INTEGER DEFAULT 1
-                    );",
+                    ); ",
+
                     @"
-                    INSERT INTO Users (Username, Password, Role) VALUES ('Admin', '*', 'Admin')
-                    ;",
+                    INSERT OR IGNORE INTO Users (Username, Password, Role) VALUES ('Admin', '*', 'Admin');
+                    ",
 
                     @"
                     CREATE TABLE IF NOT EXISTS Courses(
@@ -67,9 +71,11 @@ namespace WindowsFormsApp1.Data
                     CREATE TABLE IF NOT EXISTS Students(
                         StudentID INTEGER PRIMARY KEY AUTOINCREMENT,
                         Name TEXT NOT NULL,
-                        CourseID INTEGER NOT NULL,
+                        Address TEXT NOT NULL,
+                        CourseID INTEGER,
                         FOREIGN KEY(CourseID) REFERENCES Courses(CourseID)
                     );",
+
 
                     @"
                     CREATE TABLE IF NOT EXISTS Exams(
@@ -114,16 +120,17 @@ namespace WindowsFormsApp1.Data
                         Phone TEXT,
                         UserID INT NOT NULL,
                         FOREIGN KEY(UserID) REFERENCES Users(UserID)
-
                     );",
+
                     @"
                     CREATE TABLE IF NOT EXISTS StudentTeacher(
-                        ID INTEGER PRIMARY NOT NULL,
+                        ID INTEGER PRIMARY KEY NOT NULL,
                         StudentID INTEGER NOT NULL,
                         TeacherID INTEGER NOT NULL,
                         FOREIGN KEY(StudentID) REFERENCES Students(StudentID),
                         FOREIGN KEY(TeacherID) REFERENCES Teachers(Id)
                     );"
+
                 };
 
 
@@ -131,7 +138,7 @@ namespace WindowsFormsApp1.Data
                 {
                     using (var cmd = new SQLiteCommand(command, dbConn))
                     {
-                        cmd.ExecuteNonQuery(); // ✅ Execute table creation
+                        cmd.ExecuteNonQuery();
                     }
                 }
             }

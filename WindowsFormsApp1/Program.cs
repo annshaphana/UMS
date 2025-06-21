@@ -21,7 +21,8 @@ namespace WindowsFormsApp1
             
             Migration.CreateTables(connectionString);
 
-            Application.Run(new LoginForm()); 
+            Application.Run(new LoginForm());
+            Application.Run(new Student());
         }
     }
 }

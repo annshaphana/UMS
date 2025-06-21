@@ -33,6 +33,7 @@
             this.lblCourseId = new System.Windows.Forms.Label();
             this.lblCourseName = new System.Windows.Forms.Label();
             this.lblDepartment = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
 
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCourses)).BeginInit();
             this.SuspendLayout();

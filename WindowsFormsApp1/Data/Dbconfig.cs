@@ -11,6 +11,7 @@ namespace WindowsFormsApp1.Data
     {
         internal static readonly string ConnectionString;
         public static string connectionString = "Data Source=SchoolDb.db;Version=3;";
+
         public static SQLiteConnection GetConnection()
         {
             var conn = new SQLiteConnection(connectionString);

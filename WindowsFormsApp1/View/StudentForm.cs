@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
             // Pass the connection string here
             string connectionString = "Data Source=SchoolDb.db;Version=3;";
-            studentController = new StudentController(Dbconfig.ConnectionString);
+            studentController = new StudentController(connectionString);
 
 
             // Start loading students when form initializes

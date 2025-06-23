@@ -4,82 +4,90 @@ using System.Xml.Linq;
 using WindowsFormsApp1.Controllers;
 using WindowsFormsApp1.Models;
 
+
+
 namespace WindowsFormsApp1
 {
-    public partial class TeacherForm : Form
+    public partial class TimetableForm : Form
     {
-        private Teacher _teacher;
+        private readonly TimetableController timetableController;
 
-        public TeacherForm()
+        public TimetableForm()
         {
             InitializeComponent();
-            
-        }
-        public TeacherForm(Teacher teacher)
-        {
-            InitializeComponent();
-            _teacher = teacher;
-
-            _teacher.Name=txtName.Text;
-            _teacher.Address = txtAddress.Text;
-            _teacher.Phone = txtPhone.Text;
+            string connectionString = "Data Source=SchoolDb.db;Version=3;";
+            timetableController = new TimetableController(connectionString);
+            _ = LoadDataAsync();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async Task LoadDataAsync()
         {
-            // Create Teacher model object from form input
-            Teacher teacher = new Teacher
+            var list = await timetableController.GetAllTimetablesAsync();
+            viewTimetable.DataSource = list;
+        }
+
+        private async void btnAdd_Click(object sender, EventArgs e)
+        {
+            var t = new Timetable
             {
-                Name = txtName.Text,
-                Phone = txtPhone.Text,
-                Address = txtAddress.Text
+                Day = txtDay.Text,
+                Subject = txtSubject.Text,
+                Time = txtTime.Text,
+                Teacher = txtTeacher.Text
             };
 
-            TeacherController teacherController = new TeacherController();
-            string getMessage = teacherController.AddTeacher(teacher);
-
-            MessageBox.Show(getMessage);
-
-            txtName.Text = "";
-            txtPhone.Text = "";
-            txtAddress.Text = "";
+            await timetableController.AddTimetableAsync(t);
+            await LoadDataAsync();
+            MessageBox.Show("Added!");
         }
 
-        private void bnt_view_Click(object sender, EventArgs e)
+        private async void btnDelete_Click(object sender, EventArgs e)
         {
-
+            if (viewTimetable.CurrentRow != null)
+            {
+                int id = Convert.ToInt32(viewTimetable.CurrentRow.Cells["Id"].Value);
+                await timetableController.DeleteTimetableAsync(id);
+                await LoadDataAsync();
+                MessageBox.Show("Deleted!");
+            }
         }
 
-
-
-        private void button2_Click(object sender, EventArgs e)
+        private async void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (viewTimetable.CurrentRow != null)
+            {
+                int id = Convert.ToInt32(viewTimetable.CurrentRow.Cells["Id"].Value);
 
+                var t = new Timetable
+                {
+                    Id = id,
+                    Day = txtDay.Text,
+                    Subject = txtSubject.Text,
+                    Time = txtTime.Text,
+                    Teacher = txtTeacher.Text
+                };
+
+                await timetableController.UpdateTimetableAsync(t);
+                await LoadDataAsync();
+                MessageBox.Show("Updated!");
+            }
         }
 
-        private void Teacher_Load(object sender, EventArgs e)
+        private async void btnView_Click(object sender, EventArgs e)
         {
-
+            await LoadDataAsync();
         }
 
-        private void T_phone_TextChanged(object sender, EventArgs e)
+        private void viewTimetable_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void t_address_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void name_TextChanged(object sender, EventArgs e)
-        {
-
+            if (e.RowIndex >= 0)
+            {
+                var row = viewTimetable.Rows[e.RowIndex];
+                txtDay.Text = row.Cells["Day"].Value.ToString();
+                txtSubject.Text = row.Cells["Subject"].Value.ToString();
+                txtTime.Text = row.Cells["Time"].Value.ToString();
+                txtTeacher.Text = row.Cells["Teacher"].Value.ToString();
+            }
         }
     }
 }

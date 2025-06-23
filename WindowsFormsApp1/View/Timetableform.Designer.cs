@@ -3,109 +3,106 @@
     partial class TimetableForm
     {
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.Label lblId;
-        private System.Windows.Forms.Label lblSubjectID;
-        private System.Windows.Forms.Label lblTimeSlot;
-        private System.Windows.Forms.Label lblRoomID;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.TextBox txtSubjectID;
-        private System.Windows.Forms.TextBox txtTimeSlot;
-        private System.Windows.Forms.TextBox txtRoomID;
+        private System.Windows.Forms.TextBox txtDay;
+        private System.Windows.Forms.TextBox txtSubject;
+        private System.Windows.Forms.TextBox txtTime;
+        private System.Windows.Forms.TextBox txtTeacher;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.DataGridView dgvTimetables;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnView;
+        private System.Windows.Forms.DataGridView viewTimetable;
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
+            if (disposing && (components != null)) components.Dispose();
             base.Dispose(disposing);
         }
 
         private void InitializeComponent()
         {
-            this.lblId = new System.Windows.Forms.Label();
-            this.lblSubjectID = new System.Windows.Forms.Label();
-            this.lblTimeSlot = new System.Windows.Forms.Label();
-            this.lblRoomID = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.txtSubjectID = new System.Windows.Forms.TextBox();
-            this.txtTimeSlot = new System.Windows.Forms.TextBox();
-            this.txtRoomID = new System.Windows.Forms.TextBox();
+            this.txtDay = new System.Windows.Forms.TextBox();
+            this.txtSubject = new System.Windows.Forms.TextBox();
+            this.txtTime = new System.Windows.Forms.TextBox();
+            this.txtTeacher = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.dgvTimetables = new System.Windows.Forms.DataGridView();
-
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTimetables)).BeginInit();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnView = new System.Windows.Forms.Button();
+            this.viewTimetable = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.viewTimetable)).BeginInit();
             this.SuspendLayout();
 
-            // Label and TextBox for ID
-            this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(30, 20);
-            this.lblId.Text = "ID";
-            this.txtId.Location = new System.Drawing.Point(130, 20);
-            this.txtId.ReadOnly = true;
+            // txtDay
+            this.txtDay.Location = new System.Drawing.Point(30, 30);
+            this.txtDay.Name = "txtDay";
+            this.txtDay.Size = new System.Drawing.Size(150, 20);
 
-            // Label and TextBox for SubjectID
-            this.lblSubjectID.AutoSize = true;
-            this.lblSubjectID.Location = new System.Drawing.Point(30, 60);
-            this.lblSubjectID.Text = "Subject ID";
-            this.txtSubjectID.Location = new System.Drawing.Point(130, 60);
+            // txtSubject
+            this.txtSubject.Location = new System.Drawing.Point(30, 60);
+            this.txtSubject.Name = "txtSubject";
+            this.txtSubject.Size = new System.Drawing.Size(150, 20);
 
-            // Label and TextBox for TimeSlot
-            this.lblTimeSlot.AutoSize = true;
-            this.lblTimeSlot.Location = new System.Drawing.Point(30, 100);
-            this.lblTimeSlot.Text = "Time Slot";
-            this.txtTimeSlot.Location = new System.Drawing.Point(130, 100);
+            // txtTime
+            this.txtTime.Location = new System.Drawing.Point(30, 90);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.Size = new System.Drawing.Size(150, 20);
 
-            // Label and TextBox for RoomID
-            this.lblRoomID.AutoSize = true;
-            this.lblRoomID.Location = new System.Drawing.Point(30, 140);
-            this.lblRoomID.Text = "Room ID";
-            this.txtRoomID.Location = new System.Drawing.Point(130, 140);
+            // txtTeacher
+            this.txtTeacher.Location = new System.Drawing.Point(30, 120);
+            this.txtTeacher.Name = "txtTeacher";
+            this.txtTeacher.Size = new System.Drawing.Size(150, 20);
 
-            // Add button
-            this.btnAdd.Text = "Add";
-            this.btnAdd.Location = new System.Drawing.Point(30, 180);
+            // btnAdd
+            this.btnAdd.Location = new System.Drawing.Point(200, 30);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Text = "ADD";
+            this.btnAdd.Size = new System.Drawing.Size(80, 25);
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
 
-            // Update button
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.Location = new System.Drawing.Point(110, 180);
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-
-            // Delete button
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.Location = new System.Drawing.Point(200, 180);
+            // btnDelete
+            this.btnDelete.Location = new System.Drawing.Point(200, 60);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Text = "DELETE";
+            this.btnDelete.Size = new System.Drawing.Size(80, 25);
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
 
-            // DataGridView
-            this.dgvTimetables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTimetables.Location = new System.Drawing.Point(30, 230);
-            this.dgvTimetables.Size = new System.Drawing.Size(500, 200);
-            this.dgvTimetables.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTimetables_CellClick);
+            // btnUpdate
+            this.btnUpdate.Location = new System.Drawing.Point(200, 90);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Text = "UPDATE";
+            this.btnUpdate.Size = new System.Drawing.Size(80, 25);
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+
+            // btnView
+            this.btnView.Location = new System.Drawing.Point(200, 120);
+            this.btnView.Name = "btnView";
+            this.btnView.Text = "VIEW";
+            this.btnView.Size = new System.Drawing.Size(80, 25);
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+
+            // viewTimetable
+            this.viewTimetable.Location = new System.Drawing.Point(30, 160);
+            this.viewTimetable.Name = "viewTimetable";
+            this.viewTimetable.Size = new System.Drawing.Size(400, 200);
+            this.viewTimetable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.viewTimetable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.viewTimetable.ReadOnly = true;
+            this.viewTimetable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewTimetable_CellClick);
 
             // TimetableForm
-            this.ClientSize = new System.Drawing.Size(580, 460);
-            this.Controls.Add(this.lblId);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.lblSubjectID);
-            this.Controls.Add(this.txtSubjectID);
-            this.Controls.Add(this.lblTimeSlot);
-            this.Controls.Add(this.txtTimeSlot);
-            this.Controls.Add(this.lblRoomID);
-            this.Controls.Add(this.txtRoomID);
+            this.ClientSize = new System.Drawing.Size(480, 400);
+            this.Controls.Add(this.txtDay);
+            this.Controls.Add(this.txtSubject);
+            this.Controls.Add(this.txtTime);
+            this.Controls.Add(this.txtTeacher);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.dgvTimetables);
-            this.Text = "Timetable Form";
-
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTimetables)).EndInit();
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnView);
+            this.Controls.Add(this.viewTimetable);
+            this.Text = "Manage Timetable";
+            ((System.ComponentModel.ISupportInitialize)(this.viewTimetable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }

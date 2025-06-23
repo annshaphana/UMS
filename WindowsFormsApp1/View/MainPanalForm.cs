@@ -54,8 +54,10 @@ namespace WindowsFormsApp1
 
         private void btnTimetable_Click(object sender, EventArgs e)
         {
-            new TimetableForm().Show();
+            TimetableForm timetableForm = new TimetableForm();
+            timetableForm.Show(); // Show the timetable form
         }
+
 
         private void btnCourse_Click(object sender, EventArgs e)
         {

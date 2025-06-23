@@ -7,94 +7,96 @@ using System.Threading.Tasks;
 using WindowsFormsApp1.Models;
 
 
+
+
 namespace WindowsFormsApp1.Controllers
 {
     public class TimetableController
     {
-        private readonly string _connectionString;
+        private readonly string connectionString;
 
         public TimetableController(string connectionString)
         {
-            _connectionString = connectionString;
+            this.connectionString = connectionString;
         }
 
-        // ✅ Add a new timetable entry
-        public void AddTimetable(Timetable timetable)
+        // ✅ Add
+        public async Task AddTimetableAsync(Timetable t)
         {
-            using (var conn = new SQLiteConnection(_connectionString))
+            using (var conn = new SQLiteConnection(connectionString))
             {
-                conn.Open();
-                string query = @"INSERT INTO Timetables (SubjectID, TimeSlot, RoomID) 
-                                 VALUES (@SubjectID, @TimeSlot, @RoomID)";
+                await conn.OpenAsync();
+                string query = "INSERT INTO Timetable (Day, Subject, Time, Teacher) VALUES (@Day, @Subject, @Time, @Teacher)";
                 using (var cmd = new SQLiteCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@SubjectID", timetable.SubjectID);
-                    cmd.Parameters.AddWithValue("@TimeSlot", timetable.TimeSlot);
-                    cmd.Parameters.AddWithValue("@RoomID", timetable.RoomID);
-                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.AddWithValue("@Day", t.Day);
+                    cmd.Parameters.AddWithValue("@Subject", t.Subject);
+                    cmd.Parameters.AddWithValue("@Time", t.Time);
+                    cmd.Parameters.AddWithValue("@Teacher", t.Teacher);
+                    await cmd.ExecuteNonQueryAsync();
                 }
             }
         }
 
-        // ✅ Get all timetable entries
-        public List<Timetable> GetAllTimetables()
+        // ✅ Get all
+        public async Task<List<Timetable>> GetAllTimetablesAsync()
         {
-            var timetables = new List<Timetable>();
+            var list = new List<Timetable>();
 
-            using (var conn = new SQLiteConnection(_connectionString))
+            using (var conn = new SQLiteConnection(connectionString))
             {
-                conn.Open();
-                string query = "SELECT TimetableID, SubjectID, TimeSlot, RoomID FROM Timetables";
+                await conn.OpenAsync();
+                string query = "SELECT * FROM Timetable";
                 using (var cmd = new SQLiteCommand(query, conn))
-                using (var reader = cmd.ExecuteReader())
+                using (var reader = await cmd.ExecuteReaderAsync())
                 {
-                    while (reader.Read())
+                    while (await reader.ReadAsync())
                     {
-                        timetables.Add(new Timetable
+                        list.Add(new Timetable
                         {
-                            Id = Convert.ToInt32(reader["TimetableID"]),
-                            SubjectID = Convert.ToInt32(reader["SubjectID"]),
-                            TimeSlot = reader["TimeSlot"].ToString(),
-                            RoomID = Convert.ToInt32(reader["RoomID"])
+                            Id = reader.GetInt32(0),
+                            Day = reader.GetString(1),
+                            Subject = reader.GetString(2),
+                            Time = reader.GetString(3),
+                            Teacher = reader.GetString(4)
                         });
                     }
                 }
             }
 
-            return timetables;
+            return list;
         }
 
-        // ✅ Update a timetable entry
-        public void UpdateTimetable(Timetable timetable)
+        // ✅ Update
+        public async Task UpdateTimetableAsync(Timetable t)
         {
-            using (var conn = new SQLiteConnection(_connectionString))
+            using (var conn = new SQLiteConnection(connectionString))
             {
-                conn.Open();
-                string query = @"UPDATE Timetables 
-                                 SET SubjectID = @SubjectID, TimeSlot = @TimeSlot, RoomID = @RoomID
-                                 WHERE TimetableID = @Id";
+                await conn.OpenAsync();
+                string query = "UPDATE Timetable SET Day = @Day, Subject = @Subject, Time = @Time, Teacher = @Teacher WHERE Id = @Id";
                 using (var cmd = new SQLiteCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@SubjectID", timetable.SubjectID);
-                    cmd.Parameters.AddWithValue("@TimeSlot", timetable.TimeSlot);
-                    cmd.Parameters.AddWithValue("@RoomID", timetable.RoomID);
-                    cmd.Parameters.AddWithValue("@Id", timetable.Id);
-                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.AddWithValue("@Day", t.Day);
+                    cmd.Parameters.AddWithValue("@Subject", t.Subject);
+                    cmd.Parameters.AddWithValue("@Time", t.Time);
+                    cmd.Parameters.AddWithValue("@Teacher", t.Teacher);
+                    cmd.Parameters.AddWithValue("@Id", t.Id);
+                    await cmd.ExecuteNonQueryAsync();
                 }
             }
         }
 
-        // ✅ Delete a timetable entry
-        public void DeleteTimetable(int id)
+        // ✅ Delete
+        public async Task DeleteTimetableAsync(int id)
         {
-            using (var conn = new SQLiteConnection(_connectionString))
+            using (var conn = new SQLiteConnection(connectionString))
             {
-                conn.Open();
-                string query = "DELETE FROM Timetables WHERE TimetableID = @Id";
+                await conn.OpenAsync();
+                string query = "DELETE FROM Timetable WHERE Id = @Id";
                 using (var cmd = new SQLiteCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@Id", id);
-                    cmd.ExecuteNonQuery();
+                    await cmd.ExecuteNonQueryAsync();
                 }
             }
         }

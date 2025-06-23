@@ -54,11 +54,10 @@
             //
             // btnTimetable
             //
-            this.btnTimetable.Location = new System.Drawing.Point(20, 180);
-            this.btnTimetable.Name = "btnTimetable";
-            this.btnTimetable.Size = new System.Drawing.Size(100, 30);
-            this.btnTimetable.Text = "Timetable";
-            this.btnTimetable.Click += new System.EventHandler(this.btnTimetable_Click);
+            //this.btnTimetable.Location = new System.Drawing.Point(20, 180);
+            //this.btnTimetable.Name = "btnTimetable";
+            //this.btnTimetable.Text = "Timetable";
+            //this.btnTimetable.Click += new System.EventHandler(this.btnTimetable_Click);
             //
             // btnCourse
             //
@@ -81,7 +80,24 @@
             this.Text = "School Management Panel";
             this.Load += new System.EventHandler(this.MainPanelForm_Load);
             this.ResumeLayout(false);
+
+
+            // 
+            // btnTimetable
+            // 
+            this.btnTimetable = new System.Windows.Forms.Button();
+            this.btnTimetable.Location = new System.Drawing.Point(50, 200);
+            this.btnTimetable.Name = "btnTimetable";
+            this.btnTimetable.Size = new System.Drawing.Size(120, 30);
+            this.btnTimetable.Text = "Timetable";
+            this.btnTimetable.UseVisualStyleBackColor = true;
+            this.btnTimetable.Click += new System.EventHandler(this.btnTimetable_Click);
+
+            // Add to Controls
+            this.Controls.Add(this.btnTimetable);
+
         }
+
 
         private System.Windows.Forms.Button btnStudent;
         private System.Windows.Forms.Button btnTeacher;

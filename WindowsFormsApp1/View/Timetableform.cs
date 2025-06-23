@@ -6,10 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-using WindowsFormsApp1.Models;
 using WindowsFormsApp1.Controllers;
-
+using WindowsFormsApp1.Models;
+using System.Windows.Forms;
 
 
 
@@ -17,80 +16,88 @@ namespace WindowsFormsApp1
 {
     public partial class TimetableForm : Form
     {
-        private TimetableController timetableController;
+        private readonly TimetableController timetableController;
 
         public TimetableForm()
         {
             InitializeComponent();
             string connectionString = "Data Source=SchoolDb.db;Version=3;";
             timetableController = new TimetableController(connectionString);
-            LoadTimetables();
+            _ = LoadDataAsync(); // auto-load
         }
 
-        private void LoadTimetables()
+            // ... rest of your methods unchanged
+
+
+
+        private async Task LoadDataAsync()
         {
-            List<Timetable> timetables = timetableController.GetAllTimetables();
-            dgvTimetables.DataSource = timetables;
+            var list = await timetableController.GetAllTimetablesAsync();
+            viewTimetable.DataSource = list;
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private async void btnAdd_Click(object sender, EventArgs e)
         {
-            var timetable = new Timetable
+            var t = new Timetable
             {
-                SubjectID = int.Parse(txtSubjectID.Text),
-                TimeSlot = txtTimeSlot.Text,
-                RoomID = int.Parse(txtRoomID.Text)
+                Day = txtDay.Text,
+                Subject = txtSubject.Text,
+                Time = txtTime.Text,
+                Teacher = txtTeacher.Text
             };
 
-            timetableController.AddTimetable(timetable);
-            MessageBox.Show("Added successfully!");
-            LoadTimetables();
-            ClearFields();
+            await timetableController.AddTimetableAsync(t);
+            await LoadDataAsync();
+            MessageBox.Show("Added!");
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private async void btnDelete_Click(object sender, EventArgs e)
         {
-            var timetable = new Timetable
+            if (viewTimetable.CurrentRow != null)
             {
-                Id = int.Parse(txtId.Text),
-                SubjectID = int.Parse(txtSubjectID.Text),
-                TimeSlot = txtTimeSlot.Text,
-                RoomID = int.Parse(txtRoomID.Text)
-            };
-
-            timetableController.UpdateTimetable(timetable);
-            MessageBox.Show("Updated successfully!");
-            LoadTimetables();
-            ClearFields();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            int id = int.Parse(txtId.Text);
-            timetableController.DeleteTimetable(id);
-            MessageBox.Show("Deleted successfully!");
-            LoadTimetables();
-            ClearFields();
-        }
-
-        private void dgvTimetables_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dgvTimetables.Rows[e.RowIndex];
-                txtId.Text = row.Cells["Id"].Value.ToString();
-                txtSubjectID.Text = row.Cells["SubjectID"].Value.ToString();
-                txtTimeSlot.Text = row.Cells["TimeSlot"].Value.ToString();
-                txtRoomID.Text = row.Cells["RoomID"].Value.ToString();
+                int id = Convert.ToInt32(viewTimetable.CurrentRow.Cells["Id"].Value);
+                await timetableController.DeleteTimetableAsync(id);
+                await LoadDataAsync();
+                MessageBox.Show("Deleted!");
             }
         }
 
-        private void ClearFields()
+        private async void btnUpdate_Click(object sender, EventArgs e)
         {
-            txtId.Clear();
-            txtSubjectID.Clear();
-            txtTimeSlot.Clear();
-            txtRoomID.Clear();
+            if (viewTimetable.CurrentRow != null)
+            {
+                int id = Convert.ToInt32(viewTimetable.CurrentRow.Cells["Id"].Value);
+
+                var t = new Timetable
+                {
+                    Id = id,
+                    Day = txtDay.Text,
+                    Subject = txtSubject.Text,
+                    Time = txtTime.Text,
+                    Teacher = txtTeacher.Text
+                };
+
+                await timetableController.UpdateTimetableAsync(t);
+                await LoadDataAsync();
+                MessageBox.Show("Updated!");
+            }
+        }
+
+        private async void btnView_Click(object sender, EventArgs e)
+        {
+            await LoadDataAsync();
+        }
+
+        private void viewTimetable_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                var row = viewTimetable.Rows[e.RowIndex];
+                txtDay.Text = row.Cells["Day"].Value.ToString();
+                txtSubject.Text = row.Cells["Subject"].Value.ToString();
+                txtTime.Text = row.Cells["Time"].Value.ToString();
+                txtTeacher.Text = row.Cells["Teacher"].Value.ToString();
+            }
         }
     }
 }

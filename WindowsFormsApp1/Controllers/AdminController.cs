@@ -15,7 +15,7 @@ namespace WindowsFormsApp1.Controllers
 
     public class AdminController
     {
-        private static string connectionString = "Data Source=users.db;Version=3;";
+        private static string connectionString = "Data Source=SchoolDb.db;Version=3;";
         private const string AdminUsername = "admin";
         private const string AdminPassword = "*";
         public bool Login(string username, string password) 
@@ -24,14 +24,14 @@ namespace WindowsFormsApp1.Controllers
         }
         public static void AddAdmin(Models.Admin admin)
         {
-            using (var connection = new SQLiteConnection(connectionString))
+            using (var conn = new SQLiteConnection(connectionString)) 
             {
-                connection.Open();
+                conn.Open();
 
                 string query = @"INSERT INTO Admin (Name, Email, Phone, UserID)
                          VALUES (@Name, @Email, @Phone, @UserID)";
 
-                using (var cmd = new SQLiteCommand(query, connection))
+                using (var cmd = new SQLiteCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@Name", admin.Name);
                     cmd.Parameters.AddWithValue("@Email", admin.Email);
@@ -48,13 +48,14 @@ namespace WindowsFormsApp1.Controllers
         {
             var admins = new List<Admin>();
 
-            using (var connection = new SQLiteConnection(connectionString))
+
+            using (var conn = new SQLiteConnection(connectionString))
             {
-                connection.Open();
+                conn.Open();
 
                 string query = "SELECT * FROM Admin";
 
-                using (var cmd = new SQLiteCommand(query, connection))
+                using (var cmd = new SQLiteCommand(query, conn))
                 {
                     using (var reader = cmd.ExecuteReader())
                     {

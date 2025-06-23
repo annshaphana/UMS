@@ -12,7 +12,7 @@ namespace WindowsFormsApp1
     public partial class Student : Form
     {
         private readonly StudentController studentController;
-        private string Address;
+        
 
         public Student()
         {
@@ -43,7 +43,7 @@ namespace WindowsFormsApp1
             var student = new Models.Student
             {
                 Name = name.Text,
-                Address = address.Text
+                Address = txtAddress.Text
             };
 
             try
@@ -95,6 +95,11 @@ namespace WindowsFormsApp1
         private void label1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void address_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,7 +10,7 @@ namespace WindowsFormsApp1.Controllers
 {
     internal class CourseController
     {
-        private readonly string _connectionString;
+        private static string _connectionString = "Data Source=SchoolDb.db;Version=3;";
 
         public CourseController(string connectionString)
         {

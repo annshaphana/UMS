@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using WindowsFormsApp1.Data;
 using WindowsFormsApp1.View;
+using WindowsFormsApp1.Models;
 
 
 
@@ -21,8 +22,12 @@ namespace WindowsFormsApp1
             
             Migration.CreateTables(connectionString);
 
-            Application.Run(new LoginForm());
-            Application.Run(new Student());
+            //Application.Run(new LoginForm());
+            //Application.Run(new Student());
+
+            Teacher teacher = new Teacher();
+            teacher.Name = "sujen";
+            Application.Run(new Teacher());
         }
     }
 }

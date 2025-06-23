@@ -35,7 +35,7 @@
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.name = new System.Windows.Forms.TextBox();
-            this.address = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.viewstudent = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.viewstudent)).BeginInit();
             this.SuspendLayout();
@@ -107,12 +107,13 @@
             this.name.TabIndex = 6;
             this.name.TextChanged += new System.EventHandler(this.name_TextChanged);
             // 
-            // address
+            // txtAddress
             // 
-            this.address.Location = new System.Drawing.Point(137, 84);
-            this.address.Name = "address";
-            this.address.Size = new System.Drawing.Size(248, 20);
-            this.address.TabIndex = 8;
+            this.txtAddress.Location = new System.Drawing.Point(137, 84);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(248, 20);
+            this.txtAddress.TabIndex = 8;
+            this.txtAddress.TextChanged += new System.EventHandler(this.address_TextChanged);
             // 
             // viewstudent
             // 
@@ -129,7 +130,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.viewstudent);
-            this.Controls.Add(this.address);
+            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.name);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.btn_delete);
@@ -155,7 +156,7 @@
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.TextBox name;
-        private System.Windows.Forms.TextBox address;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.DataGridView viewstudent;
     }
 }

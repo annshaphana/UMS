@@ -3,44 +3,44 @@
   "WorkspaceRootPath": "Z:\\C#\\project\\WindowsFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|Z:\\C#\\project\\WindowsFormsApp1\\windowsformsapp1\\view\\student.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|solutionrelative:windowsformsapp1\\view\\student.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|z:\\c#\\project\\windowsformsapp1\\windowsformsapp1\\models\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|solutionrelative:windowsformsapp1\\models\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|Z:\\C#\\project\\WindowsFormsApp1\\windowsformsapp1\\data\\migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|solutionrelative:windowsformsapp1\\data\\migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|Z:\\C#\\project\\WindowsFormsApp1\\windowsformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|solutionrelative:windowsformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|Z:\\C#\\project\\WindowsFormsApp1\\windowsformsapp1\\view\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|solutionrelative:windowsformsapp1\\view\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|Z:\\C#\\project\\WindowsFormsApp1\\windowsformsapp1\\view\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|solutionrelative:windowsformsapp1\\view\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|Z:\\C#\\project\\WindowsFormsApp1\\windowsformsapp1\\view\\teacherform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|z:\\c#\\project\\windowsformsapp1\\windowsformsapp1\\view\\teacherform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|solutionrelative:windowsformsapp1\\view\\teacherform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|Z:\\C#\\project\\WindowsFormsApp1\\windowsformsapp1\\view\\teacherform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|z:\\c#\\project\\windowsformsapp1\\windowsformsapp1\\view\\studentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|solutionrelative:windowsformsapp1\\view\\studentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|z:\\c#\\project\\windowsformsapp1\\windowsformsapp1\\view\\teacherform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|solutionrelative:windowsformsapp1\\view\\teacherform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|Z:\\C#\\project\\WindowsFormsApp1\\windowsformsapp1\\data\\dbconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|solutionrelative:windowsformsapp1\\data\\dbconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|z:\\c#\\project\\windowsformsapp1\\windowsformsapp1\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|solutionrelative:windowsformsapp1\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|Z:\\C#\\project\\WindowsFormsApp1\\windowsformsapp1\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|solutionrelative:windowsformsapp1\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|z:\\c#\\project\\windowsformsapp1\\windowsformsapp1\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|solutionrelative:windowsformsapp1\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|z:\\c#\\project\\windowsformsapp1\\windowsformsapp1\\view\\studentform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|solutionrelative:windowsformsapp1\\view\\studentform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|z:\\c#\\project\\windowsformsapp1\\windowsformsapp1\\view\\mainpanalform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|solutionrelative:windowsformsapp1\\view\\mainpanalform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|z:\\c#\\project\\windowsformsapp1\\windowsformsapp1\\view\\mainpanalform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|solutionrelative:windowsformsapp1\\view\\mainpanalform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|z:\\c#\\project\\windowsformsapp1\\windowsformsapp1\\view\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|solutionrelative:windowsformsapp1\\view\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|z:\\c#\\project\\windowsformsapp1\\windowsformsapp1\\view\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E0BCE444-1D5E-497C-817A-D78628C379E3}|WindowsFormsApp1\\StudentManagemant.csproj|solutionrelative:windowsformsapp1\\view\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,127 +50,134 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Teacher.cs",
-              "DocumentMoniker": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\Models\\Teacher.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Models\\Teacher.cs",
-              "ToolTip": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\Models\\Teacher.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Models\\Teacher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T10:42:02.954Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Student.Designer.cs",
-              "DocumentMoniker": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\Student.Designer.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\View\\Student.Designer.cs",
-              "ToolTip": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\Student.Designer.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\View\\Student.Designer.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwKIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T10:39:24.954Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Student.cs",
-              "DocumentMoniker": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\Student.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\View\\Student.cs",
-              "ToolTip": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\Student.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\View\\Student.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAIAwwA4AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T10:35:20.74Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Student.cs [Design]",
-              "DocumentMoniker": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\Student.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\View\\Student.cs",
-              "ToolTip": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\Student.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp1\\View\\Student.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T10:35:15.735Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "TeacherForm.cs",
               "DocumentMoniker": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\TeacherForm.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\View\\TeacherForm.cs",
               "ToolTip": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\TeacherForm.cs",
               "RelativeToolTip": "WindowsFormsApp1\\View\\TeacherForm.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAtwC0AAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T10:33:13.022Z"
+              "WhenOpened": "2025-06-23T07:27:27.507Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "TeacherForm.cs [Design]",
               "DocumentMoniker": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\TeacherForm.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\View\\TeacherForm.cs",
               "ToolTip": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\TeacherForm.cs [Design]",
               "RelativeToolTip": "WindowsFormsApp1\\View\\TeacherForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T10:33:09.626Z"
+              "WhenOpened": "2025-06-23T07:27:23.288Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\Program.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Program.cs",
-              "ToolTip": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\Program.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAnAAAA",
+              "Title": "Student.cs",
+              "DocumentMoniker": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Models\\Student.cs",
+              "ToolTip": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\Models\\Student.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Models\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T10:29:18.798Z"
+              "WhenOpened": "2025-06-23T07:21:11.021Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Controllers\\AdminController.cs",
-              "ToolTip": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Controllers\\AdminController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABEAAAAyAAAA",
+              "DocumentIndex": 5,
+              "Title": "StudentForm.Designer.cs",
+              "DocumentMoniker": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\StudentForm.Designer.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\View\\StudentForm.Designer.cs",
+              "ToolTip": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\StudentForm.Designer.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\View\\StudentForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T10:14:04.746Z"
+              "WhenOpened": "2025-06-23T07:19:08.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentForm.cs",
+              "DocumentMoniker": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\StudentForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\View\\StudentForm.cs",
+              "ToolTip": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\StudentForm.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\View\\StudentForm.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T07:04:27.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainPanalForm.cs",
+              "DocumentMoniker": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\MainPanalForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\View\\MainPanalForm.cs",
+              "ToolTip": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\MainPanalForm.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\View\\MainPanalForm.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAawEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T06:19:59.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Controllers\\StudentController.cs",
+              "ToolTip": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Controllers\\StudentController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowEcAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T06:23:49.347Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Dbconfig.cs",
-              "DocumentMoniker": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\Data\\Dbconfig.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Data\\Dbconfig.cs",
-              "ToolTip": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\Data\\Dbconfig.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Data\\Dbconfig.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAMAAAA",
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\LoginForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\View\\LoginForm.cs",
+              "ToolTip": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\LoginForm.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\View\\LoginForm.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAnwDgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T09:30:34.777Z"
+              "WhenOpened": "2025-06-23T06:42:49.867Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Migration.cs",
-              "DocumentMoniker": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\Data\\Migration.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Data\\Migration.cs",
-              "ToolTip": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\Data\\Migration.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Data\\Migration.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAgwCcAAAAYAAAA",
+              "DocumentIndex": 7,
+              "Title": "MainPanalForm.cs [Design]",
+              "DocumentMoniker": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\MainPanalForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\View\\MainPanalForm.cs",
+              "ToolTip": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\MainPanalForm.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\View\\MainPanalForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T11:38:37.587Z"
+              "WhenOpened": "2025-06-23T06:19:58.398Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\LoginForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\View\\LoginForm.cs",
+              "ToolTip": "Z:\\C#\\project\\WindowsFormsApp1\\WindowsFormsApp1\\View\\LoginForm.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\View\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T06:42:48.513Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.View;
+using WindowsFormsApp1.Models;
 
 
 
@@ -26,13 +27,20 @@ namespace WindowsFormsApp1
 
         private void btnStudent_Click(object sender, EventArgs e)
         {
-            new Student().Show();
+            StudentForm studentForm = new StudentForm();
+            studentForm.Show(); 
+        
         }
 
         private void btnTeacher_Click(object sender, EventArgs e)
         {
-            new TeacherForm().Show();
+
+            TeacherForm form = new TeacherForm();
+
+            form.Show();
         }
+
+
 
         private void btnExam_Click(object sender, EventArgs e)
         {

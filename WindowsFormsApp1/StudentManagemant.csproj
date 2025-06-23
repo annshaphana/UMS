@@ -103,11 +103,11 @@
     <Compile Include="View\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\MainForm.cs">
+    <Compile Include="View\MainPanalForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="View\MainPanalForm.Designer.cs">
+      <DependentUpon>MainPanalForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\MarkForm.cs">
       <SubType>Form</SubType>
@@ -115,11 +115,11 @@
     <Compile Include="View\MarkForm.Designer.cs">
       <DependentUpon>MarkForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Student.cs">
+    <Compile Include="View\StudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Student.Designer.cs">
-      <DependentUpon>Student.cs</DependentUpon>
+    <Compile Include="View\StudentForm.Designer.cs">
+      <DependentUpon>StudentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\StudentTeacherForm.cs">
       <SubType>Form</SubType>
@@ -166,14 +166,14 @@
     <EmbeddedResource Include="View\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="View\MainPanalForm.resx">
+      <DependentUpon>MainPanalForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MarkForm.resx">
       <DependentUpon>MarkForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Student.resx">
-      <DependentUpon>Student.cs</DependentUpon>
+    <EmbeddedResource Include="View\StudentForm.resx">
+      <DependentUpon>StudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\StudentTeacherForm.resx">
       <DependentUpon>StudentTeacherForm.cs</DependentUpon>

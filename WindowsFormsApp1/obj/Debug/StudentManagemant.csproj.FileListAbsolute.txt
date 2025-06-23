@@ -10,7 +10,6 @@ Z:\C#\project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View.
 Z:\C#\project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.LoginForm.resources
 Z:\C#\project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainPanelForm.resources
 Z:\C#\project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View.MarkForm.resources
-Z:\C#\project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Student.resources
 Z:\C#\project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.StudentTeacherForm.resources
 Z:\C#\project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SubjectForm.resources
 Z:\C#\project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.TeacherForm.resources
@@ -21,3 +20,4 @@ Z:\C#\project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\StudentM.67BBF900.Up2D
 Z:\C#\project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 Z:\C#\project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 Z:\C#\project\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+Z:\C#\project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.StudentForm.resources

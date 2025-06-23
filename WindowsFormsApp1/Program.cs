@@ -16,18 +16,16 @@ namespace WindowsFormsApp1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            
+           
             string connectionString = "Data Source=SchoolDb.db;Version=3;";
 
-            
+
             Migration.CreateTables(connectionString);
 
-            //Application.Run(new LoginForm());
-            //Application.Run(new Student());
+            Application.Run(new LoginForm());
+            //Application.Run(new MainPanalForm());
 
-            Teacher teacher = new Teacher();
-            teacher.Name = "sujen";
-            Application.Run(new Teacher());
+            
         }
     }
 }

@@ -8,9 +8,21 @@ namespace WindowsFormsApp1
 {
     public partial class TeacherForm : Form
     {
+        private Teacher _teacher;
+
         public TeacherForm()
         {
             InitializeComponent();
+            
+        }
+        public TeacherForm(Teacher teacher)
+        {
+            InitializeComponent();
+            _teacher = teacher;
+
+            _teacher.Name=txtName.Text;
+            _teacher.Address = txtAddress.Text;
+            _teacher.Phone = txtPhone.Text;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -27,6 +39,10 @@ namespace WindowsFormsApp1
             string getMessage = teacherController.AddTeacher(teacher);
 
             MessageBox.Show(getMessage);
+
+            txtName.Text = "";
+            txtPhone.Text = "";
+            txtAddress.Text = "";
         }
 
         private void bnt_view_Click(object sender, EventArgs e)

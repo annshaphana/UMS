@@ -5,63 +5,38 @@ using System.Threading.Tasks;
 using WindowsFormsApp1.Data;
 using WindowsFormsApp1.Models;
 
+
+
 namespace WindowsFormsApp1.Controllers
 {
-    internal class StudentController
+    public class StudentController
     {
         private readonly string connectionString;
 
         public StudentController(string connectionString)
         {
-            this.connectionString = connectionString; // Fixed assignment
+            this.connectionString = connectionString;
         }
 
-        // Add a new student
-        public async Task AddStudentAsync(Models.Student student)
+        public async Task<List<Student>> GetAllStudentsAsync()
         {
-            if (student == null)
-                throw new ArgumentNullException(nameof(student));
-            if (string.IsNullOrWhiteSpace(student.Name))
-                throw new ArgumentException("Name cannot be empty.");
-            if (string.IsNullOrWhiteSpace(student.Address))
-                throw new ArgumentException("Address cannot be empty.");
+            var students = new List<Student>();
 
             using (var conn = new SQLiteConnection(connectionString))
             {
                 await conn.OpenAsync();
-
-                string sql = "INSERT INTO Students (Name, Address) VALUES (@Name, @Address)";
-                using (var cmd = new SQLiteCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@Name", student.Name);
-                    cmd.Parameters.AddWithValue("@Address", student.Address);
-                    await cmd.ExecuteNonQueryAsync();
-                }
-            }
-        }
-
-        // Get all students
-        public async Task<List<Models.Student>> GetAllStudentsAsync()
-        {
-            var students = new List<Models.Student>();
-
-            using (var conn = new SQLiteConnection(connectionString))
-            {
-                await conn.OpenAsync();
-
-                string sql = "SELECT Id, Name, Address FROM Students";
-                using (var cmd = new SQLiteCommand(sql, conn))
+                var query = "SELECT * FROM Students";
+                using (var cmd = new SQLiteCommand(query, conn))
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     while (await reader.ReadAsync())
                     {
-                        var student = new Models.Student
+                        students.Add(new Student
                         {
-                            Id = Convert.ToInt32(reader["Id"]),
-                            Name = reader["Name"].ToString(),
-                            Address = reader["Address"].ToString()
-                        };
-                        students.Add(student);
+                            StudentID = reader.GetInt32(0),
+                            Name = reader.GetString(1),
+                            Address = reader.GetString(2)
+                        });
                     }
                 }
             }
@@ -69,76 +44,50 @@ namespace WindowsFormsApp1.Controllers
             return students;
         }
 
-        // Get student by Id
-        public async Task<Models.Student> GetStudentByIdAsync(int id)
+        public async Task AddStudentAsync(Student student)
         {
             using (var conn = new SQLiteConnection(connectionString))
             {
                 await conn.OpenAsync();
-
-                string sql = "SELECT Id, Name, Address FROM Students WHERE Id = @Id";
-                using (var cmd = new SQLiteCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@Id", id);
-
-                    using (var reader = await cmd.ExecuteReaderAsync())
-                    {
-                        if (await reader.ReadAsync())
-                        {
-                            return new Models.Student
-                            {
-                                Id = Convert.ToInt32(reader["Id"]),
-                                Name = reader["Name"].ToString(),
-                                Address = reader["Address"].ToString()
-                            };
-                        }
-                    }
-                }
-            }
-
-            return null;
-        }
-
-        // Update student
-        public async Task UpdateStudentAsync(Models.Student student)
-        {
-            if (student == null)
-                throw new ArgumentNullException(nameof(student));
-            if (string.IsNullOrWhiteSpace(student.Name))
-                throw new ArgumentException("Name cannot be empty.");
-            if (string.IsNullOrWhiteSpace(student.Address))
-                throw new ArgumentException("Address cannot be empty.");
-
-            using (var conn = new SQLiteConnection(connectionString))
-            {
-                await conn.OpenAsync();
-
-                string sql = "UPDATE Students SET Name = @Name, Address = @Address WHERE Id = @Id";
-                using (var cmd = new SQLiteCommand(sql, conn))
+                var query = "INSERT INTO Students (Name, Address) VALUES (@Name, @Address)";
+                using (var cmd = new SQLiteCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@Name", student.Name);
                     cmd.Parameters.AddWithValue("@Address", student.Address);
-                    cmd.Parameters.AddWithValue("@Id", student.Id);
-
                     await cmd.ExecuteNonQueryAsync();
                 }
             }
         }
 
-        // Delete student by Id
-        public async Task DeleteStudentAsync(int id)
+        public async Task UpdateStudentAsync(Student student)
         {
             using (var conn = new SQLiteConnection(connectionString))
             {
                 await conn.OpenAsync();
-
-                string sql = "DELETE FROM Students WHERE Id = @Id";
-                using (var cmd = new SQLiteCommand(sql, conn))
+                var query = "UPDATE Students SET Name = @Name, Address = @Address WHERE StudentID = @StudentID";
+                using (var cmd = new SQLiteCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@Id", id);
+                    cmd.Parameters.AddWithValue("@Name", student.Name);
+                    cmd.Parameters.AddWithValue("@Address", student.Address);
+                    cmd.Parameters.AddWithValue("@StudentID", student.StudentID);
+                    await cmd.ExecuteNonQueryAsync();
+                }
+            }
+        }
+
+        public async Task DeleteStudentAsync(int studentId)
+        {
+            using (var conn = new SQLiteConnection(connectionString))
+            {
+                await conn.OpenAsync();
+                var query = "DELETE FROM Students WHERE StudentID = @StudentID";
+                using (var cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@StudentID", studentId);
                     await cmd.ExecuteNonQueryAsync();
                 }
             }
         }
     }
 }
+

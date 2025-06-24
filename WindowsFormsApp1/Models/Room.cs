@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.Models
 {
-    internal class Room
+    public class Room
     {
         public int Id { get; set; }
         public string RoomName { get; set; }

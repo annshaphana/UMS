@@ -3,16 +3,18 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using WindowsFormsApp1.Controllers;
 using WindowsFormsApp1.Models;
+using System.Threading.Tasks;
+using WindowsFormsApp1.View;
 
 
 
 namespace WindowsFormsApp1
 {
-    public partial class TimetableForm : Form
+    public partial class TimetableFormnew : Form
     {
         private readonly TimetableController timetableController;
 
-        public TimetableForm()
+        public TimetableFormnew()
         {
             InitializeComponent();
             string connectionString = "Data Source=SchoolDb.db;Version=3;";
@@ -28,7 +30,7 @@ namespace WindowsFormsApp1
 
         private async void btnAdd_Click(object sender, EventArgs e)
         {
-            var t = new Timetable
+            var t = new Model.Timetable
             {
                 Day = txtDay.Text,
                 Subject = txtSubject.Text,
@@ -58,7 +60,7 @@ namespace WindowsFormsApp1
             {
                 int id = Convert.ToInt32(viewTimetable.CurrentRow.Cells["Id"].Value);
 
-                var t = new Timetable
+                var t = new Model.Timetable
                 {
                     Id = id,
                     Day = txtDay.Text,
@@ -88,6 +90,16 @@ namespace WindowsFormsApp1
                 txtTime.Text = row.Cells["Time"].Value.ToString();
                 txtTeacher.Text = row.Cells["Teacher"].Value.ToString();
             }
+        }
+
+        private void TimetableFormnew_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public static implicit operator TimetableFormnew(TimetableForm v)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -115,6 +115,12 @@
     <Compile Include="View\MarkForm.Designer.cs">
       <DependentUpon>MarkForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\RoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RoomForm.Designer.cs">
+      <DependentUpon>RoomForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\StudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,7 @@
     <Compile Include="View\TeacherForm.Designer.cs">
       <DependentUpon>TeacherForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TeacherForm1.cs" />
     <Compile Include="View\TimetableForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\MarkForm.resx">
       <DependentUpon>MarkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RoomForm.resx">
+      <DependentUpon>RoomForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\StudentForm.resx">
       <DependentUpon>StudentForm.cs</DependentUpon>

@@ -48,28 +48,28 @@
             this.txtId.Location = new System.Drawing.Point(130, 20);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(200, 22);
+            this.txtId.Size = new System.Drawing.Size(200, 20);
             this.txtId.TabIndex = 0;
             // 
             // txtStudentID
             // 
             this.txtStudentID.Location = new System.Drawing.Point(130, 60);
             this.txtStudentID.Name = "txtStudentID";
-            this.txtStudentID.Size = new System.Drawing.Size(200, 22);
+            this.txtStudentID.Size = new System.Drawing.Size(200, 20);
             this.txtStudentID.TabIndex = 1;
             // 
             // txtExamID
             // 
             this.txtExamID.Location = new System.Drawing.Point(130, 100);
             this.txtExamID.Name = "txtExamID";
-            this.txtExamID.Size = new System.Drawing.Size(200, 22);
+            this.txtExamID.Size = new System.Drawing.Size(200, 20);
             this.txtExamID.TabIndex = 2;
             // 
             // txtScore
             // 
             this.txtScore.Location = new System.Drawing.Point(130, 140);
             this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(200, 22);
+            this.txtScore.Size = new System.Drawing.Size(200, 20);
             this.txtScore.TabIndex = 3;
             // 
             // btnAdd
@@ -112,26 +112,34 @@
             // lblId
             // 
             this.lblId.Location = new System.Drawing.Point(20, 20);
-            this.lblId.Text = "Mark ID:";
+            this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(100, 22);
+            this.lblId.TabIndex = 8;
+            this.lblId.Text = "Mark ID:";
             // 
             // lblStudentID
             // 
             this.lblStudentID.Location = new System.Drawing.Point(20, 60);
-            this.lblStudentID.Text = "Student ID:";
+            this.lblStudentID.Name = "lblStudentID";
             this.lblStudentID.Size = new System.Drawing.Size(100, 22);
+            this.lblStudentID.TabIndex = 9;
+            this.lblStudentID.Text = "Student ID:";
             // 
             // lblExamID
             // 
             this.lblExamID.Location = new System.Drawing.Point(20, 100);
-            this.lblExamID.Text = "Exam ID:";
+            this.lblExamID.Name = "lblExamID";
             this.lblExamID.Size = new System.Drawing.Size(100, 22);
+            this.lblExamID.TabIndex = 10;
+            this.lblExamID.Text = "Exam ID:";
             // 
             // lblScore
             // 
             this.lblScore.Location = new System.Drawing.Point(20, 140);
-            this.lblScore.Text = "Score:";
+            this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(100, 22);
+            this.lblScore.TabIndex = 11;
+            this.lblScore.Text = "Score:";
             // 
             // MarkForm
             // 
@@ -150,9 +158,11 @@
             this.Controls.Add(this.lblScore);
             this.Name = "MarkForm";
             this.Text = "Manage Marks";
+            this.Load += new System.EventHandler(this.MarkForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
     }
 }

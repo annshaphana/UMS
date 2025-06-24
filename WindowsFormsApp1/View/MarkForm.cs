@@ -19,7 +19,7 @@ namespace WindowsFormsApp1.View
         public MarkForm()
         {
             InitializeComponent();
-            string connectionString = "Data Source=school.db"; // Update path if needed
+            string connectionString = "Data Source=SchoolDb.db;Version=3;";
             _markController = new MarkController(connectionString);
             LoadMarks();
         }
@@ -85,6 +85,11 @@ namespace WindowsFormsApp1.View
             txtStudentID.Clear();
             txtExamID.Clear();
             txtScore.Clear();
+        }
+
+        private void MarkForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

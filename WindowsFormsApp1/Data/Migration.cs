@@ -29,6 +29,7 @@ namespace WindowsFormsApp1.Data
                     pragma.ExecuteNonQuery();
                 }
 
+
                 string[] tableCommands = new string[]
                 {
                     @"
@@ -55,8 +56,9 @@ namespace WindowsFormsApp1.Data
 
                     @"
                     CREATE TABLE IF NOT EXISTS Courses (
-                        CourseId INTEGER PRIMARY KEY AUTOINCREMENT,
+                        CourseID INTEGER PRIMARY KEY AUTOINCREMENT,
                         CourseName TEXT NOT NULL,
+                        Department TEXT
                     );",
 
                     @"
@@ -86,13 +88,13 @@ namespace WindowsFormsApp1.Data
                     );",
 
                     @"
-                    CREATE TABLE IF NOT EXISTS Marks(
-                        MarkID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    CREATE TABLE IF NOT EXISTS Marks (
+                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
                         StudentID INTEGER NOT NULL,
                         ExamID INTEGER NOT NULL,
                         Score INTEGER NOT NULL,
                         FOREIGN KEY(StudentID) REFERENCES Students(StudentID),
-                        FOREIGN KEY(ExamID) REFERENCES Exams(ExamID)
+                        FOREIGN KEY(ExamID) REFERENCES Exams(ExamID)ERENCES Exams(ExamID)
                     );",
 
                     @"

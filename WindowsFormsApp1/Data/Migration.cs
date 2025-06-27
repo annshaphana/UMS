@@ -56,9 +56,9 @@ namespace WindowsFormsApp1.Data
 
                     @"
                     CREATE TABLE IF NOT EXISTS Courses (
-                        CourseID INTEGER PRIMARY KEY AUTOINCREMENT,
-                        CourseName TEXT NOT NULL,
-                        Department TEXT
+                        ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                        Name TEXT NOT NULL,
+                        Description TEXT
                     );",
 
                     @"
@@ -88,14 +88,16 @@ namespace WindowsFormsApp1.Data
                     );",
 
                     @"
-                    CREATE TABLE IF NOT EXISTS Marks (
-                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        StudentID INTEGER NOT NULL,
-                        ExamID INTEGER NOT NULL,
-                        Score INTEGER NOT NULL,
-                        FOREIGN KEY(StudentID) REFERENCES Students(StudentID),
-                        FOREIGN KEY(ExamID) REFERENCES Exams(ExamID)ERENCES Exams(ExamID)
+                     CREATE TABLE IF NOT EXISTS Marks (
+                        ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                        StudentId INTEGER,
+                        SubjectId INTEGER,
+                        Score INTEGER,
+                        FOREIGN KEY(StudentId) REFERENCES Students(ID),
+                        FOREIGN KEY(SubjectId) REFERENCES Subjects(ID)
                     );",
+                
+
 
                     @"
                     CREATE TABLE IF NOT EXISTS Rooms(

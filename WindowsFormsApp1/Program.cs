@@ -22,10 +22,10 @@ namespace WindowsFormsApp1
 
             Migration.CreateTables(connectionString);
 
-            //Application.Run(new LoginForm());
+           // Application.Run(new LoginForm());
             //Application.Run(new MainPanelForm());
-            Application.Run(new MarkForm());
-            //Application.Run(new RoomForm());
+            //Application.Run(new MarkForm());
+            Application.Run(new CourseForm());
             
         }
     }

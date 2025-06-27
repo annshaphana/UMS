@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
             this.btnSubject = new System.Windows.Forms.Button();
             this.btnTimetable = new System.Windows.Forms.Button();
             this.btnCourse = new System.Windows.Forms.Button();
-            this.btnRooms = new System.Windows.Forms.Button();
+           // this.btnRooms = new System.Windows.Forms.Button();
 
             this.SuspendLayout();
             //
@@ -80,7 +80,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.btnSubject);
             this.Controls.Add(this.btnTimetable);
             this.Controls.Add(this.btnCourse);
-            this.Controls.Add(this.btnRooms);
+            //this.Controls.Add(this.btnRooms);
 
             this.Name = "MainPanelForm";
             this.Text = "School Management Panel";
@@ -105,13 +105,13 @@ namespace WindowsFormsApp1
             //
             // btnRooms
             // 
-            this.btnRooms.Location = new System.Drawing.Point(50, 50);
-            this.btnRooms.Name = "btnRooms";
-            this.btnRooms.Size = new System.Drawing.Size(120, 40);
-            this.btnRooms.TabIndex = 0;
-            this.btnRooms.Text = "Manage Rooms";
-            this.btnRooms.UseVisualStyleBackColor = true;
-            this.btnRooms.Click += new System.EventHandler(this.btnRooms_Click);
+            //this.btnRooms.Location = new System.Drawing.Point(50, 50);
+            //this.btnRooms.Name = "btnRooms";
+            //this.btnRooms.Size = new System.Drawing.Size(120, 40);
+            //this.btnRooms.TabIndex = 0;
+            //this.btnRooms.Text = "Manage Rooms";
+            //this.btnRooms.UseVisualStyleBackColor = true;
+            //this.btnRooms.Click += new System.EventHandler(this.btnRooms_Click);
         }
 
 
@@ -121,7 +121,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btnSubject;
         private System.Windows.Forms.Button btnTimetable;
         private System.Windows.Forms.Button btnCourse;
-        private System.Windows.Forms.Button btnRooms;
+        //private System.Windows.Forms.Button btnRooms;
 
     }    
 }

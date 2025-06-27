@@ -95,5 +95,10 @@ namespace WindowsFormsApp1.View
             txtRoomType.Text = "";
             selectedRoomId = -1;
         }
+
+        private void RoomForm_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
